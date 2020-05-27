@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Teste Propriedades String</title>
+        <style>
+            body{
+                font: normal 20pt Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>O que fazer com Strings?</h1>
+        <script>
+            var nome = window.prompt("Digite seu nome")
+            document.write(`Prazer em te conhecer, ${nome} <br>`)
+            document.writeln(`${nome} possui ${nome.length} letras`) // Numero de letras
+            document.write(`Seu nome, todo em maiusculo eh: ${nome.toUpperCase()} <br>`) // Deixa letra maiuscula
+            document.write(`Em minusculo: ${nome.toLocaleLowerCase()}`) // Deixa tudo minusculo
+        </script>
+
+    </body>
+</html>

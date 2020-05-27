@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!-- 
+        Chamada das funcoes via HTML
+        Indico que no clique, a função clicar() é chamada--
+        Indico que quando o mouse entrar, dispara a funcao entrar()(
+        Quando o mouse sair, dispara a funcao sair()-->
+        Interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area')
+        // Chamada das funcoes dentro do proprio JavaScript
+        area.addEventListener(`click`, clicar) // Indico o evento que ele fica esperando, e qual funcao eh chamada nesse caso
+        area.addEventListener(`mouseenter`, entrar) // Quando o mouse entrar...
+        area.addEventListener(`mouseout`, sair) // Quando o mouse sair...
+
+        function clicar(){
+            area.innerText = 'Clicou'
+            area.style.background = 'red'
+        }
+        function entrar(){
+            area.innerText = 'Entrou'
+        }
+        function sair(){
+            area.innerText = 'Saiu'
+            area.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

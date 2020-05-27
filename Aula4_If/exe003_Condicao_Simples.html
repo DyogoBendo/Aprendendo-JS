@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="nVel" id="iVel">
+    <input type="button" value="Submeter" onclick="multa()">
+    <div id="resul"> Resultado: </div>
+    <script>
+        function multa(){
+            var vel = Number(window.document.getElementById("iVel").value)
+            var res = window.document.getElementById('resul')
+            res.innerHTML = '<p>Dirija com cuidado e cinto de seguranca<p>'
+            if(vel > 70){
+                res.innerHTML += `Voce foi <strong> multado </strong> , por sua velocidade ser de ${vel}, ultrapassando os 70 Km/h`
+            }
+        }
+    </script>
+</body>
+</html>

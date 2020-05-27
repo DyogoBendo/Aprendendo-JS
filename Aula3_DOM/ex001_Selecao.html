@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros Passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(75, 151, 238);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg" name="msg2"> Clique em mim </div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // Seleciona a primeira tag <p>
+        var corpo = window.document.body // Salva na variavel o body do programa
+        var p2 = window.document.getElementsByTagName('p')[1] //Seleciona a segunda tag <p>
+        var d = window.document.getElementById('msg') // Seleciona, via ID, a div de Id msg
+        var d2 = window.document.getElementsByName('msg2')[0] // Seleciona a primeira div, pelo name
+        var d3 = window.document.querySelector('div#msg')
+        p1.style.color = 'red' // Altera o estilo da primeira tag <p>
+        corpo.style.background = 'green' // Altera a cor de fundo do programa
+        window.document.write(p2.innerHTML + '<br>') // mostra o texto com a formatação HTML
+        window.document.write(p1.innerText + "<br>") // Mostra o conteudo da primera tag <p>
+        d.style.background = "yellow" // Define a cor de fundo da div, com ID msg
+        d.innerText = 'Estou alterando o texto...' // Altera o texto original
+        d2.style.color = 'black' // Aletera a cor da fonte para preto
+        d3.style.color = 'purple'//Altera a cor da fonte para roxo
+        window.document.write('Ola, Mundo! <br>') // Escreve ola mundo na tela
+        window.document.write(window.document.charset + "<br>") // Mostra o set de caracteres atual
+        window.document.write(window.navigator.appName + "<br>") // Mostra o navegador que esta sendo usado
+        window.document.write(window.document.URL) // Mostra a URL
+    </script>
+</body>
+</html>

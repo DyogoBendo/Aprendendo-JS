@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <Label for="iPais">Digite o pais onde mora: </Label>
+    <input type="text" name="nPais" id="iPais">
+    <input type="button" value="Checar" onclick="pais()">
+    <div id="mora">
+
+    </div>
+    <script>
+        function pais(){
+            var pais = window.document.getElementById('iPais').value
+            var mora = window.document.getElementById(`mora`)
+            if(pais == `Brasil`){   
+                mora.innerHTML = "Voce eh brasileiro"
+            }
+            else{
+                mora.innerHTML = "Voce eh estrangeiro"
+            }
+        }
+    </script>
+</body>
+</html>

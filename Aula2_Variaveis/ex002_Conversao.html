@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Programinha</title>
+    </head>
+    <body>
+        <h1>Ola mundo</h1>
+        <script>
+            var n1 = window.prompt('Digite um numero') // retorna string
+            var n2 = window.prompt('Digite outro numero')
+            //Conversao direta: var n2 = Number(window.prompt('Digite outro numero'))
+            n1 = Number.parseFloat(n1) // converter para numero real
+            n2 = Number.parseInt(n2) // converter para numero inteiro
+            // Parse significa converter
+            n3 = n1 + n2
+            n3 = Number(n3) // converter para numero 
+            window.alert(`A soma do valor digitado foi: ${n3}`) // Template string e ${} eh um place holder
+            // number + number = adicao
+            // string + string = concatenacao
+            n1 = String(n1) // Converter para String
+            n2 = n2.toString() // Converter para String
+            n3 = n1 + n2
+            window.alert(n3)
+        </script>
+
+    </body>
+</html>
